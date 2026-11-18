@@ -1,0 +1,48 @@
+.figure { margin: var(--space-4) 0; }
+.svg { width: 100%; max-width: 640px; height: auto; display: block; }
+.svgSmall { width: 100%; max-width: 280px; height: auto; display: block; }
+
+.axis { stroke: var(--ink-2); stroke-width: 2; }
+.arrowHead { fill: var(--ink-2); }
+.tick { stroke: var(--ink-3); stroke-width: 1.5; }
+.zero { stroke: var(--ink); stroke-width: 2.5; }
+.tickLabel { font-size: 13px; fill: var(--ink-2); text-anchor: middle; font-family: var(--font); }
+.point { fill: #2a78d6; stroke: #fff; stroke-width: 2; }
+.pointLabel { font-size: 14px; font-weight: 600; fill: #1b5aa6; text-anchor: middle; font-family: var(--font); }
+
+.pvWrap { overflow-x: auto; }
+.pv { border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: max-content; }
+.pv th, .pv td { border: 1.5px solid var(--line-strong); text-align: center; padding: 0.4rem 0.7rem; }
+.pv th { font-size: 0.75rem; font-weight: 500; color: var(--ink-2); background: var(--surface-2); max-width: 7rem; }
+.pv td { font-size: 1.5rem; font-weight: 500; background: var(--surface); }
+.beforePoint { border-right: 4px solid var(--ink) !important; }
+.caption { font-size: var(--text-sm); color: var(--ink-3); margin-top: var(--space-2); }
+
+.shape { fill: #eef1f7; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+.rightAngle { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.sideLabel { font-size: 15px; font-weight: 600; fill: var(--ink); font-family: var(--font); text-anchor: middle; }
+
+.graph { width: 100%; max-width: 420px; height: auto; display: block; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.shapes { width: 100%; max-width: 360px; height: auto; display: block; }
+.grid { stroke: #e3e7ef; stroke-width: 1; }
+.axisLine { stroke: var(--ink-2); stroke-width: 1.5; }
+.tickLabelY { font-size: 12px; fill: var(--ink-2); text-anchor: end; font-family: var(--font); }
+.axisName { font-size: 13px; font-style: italic; fill: var(--ink); font-family: var(--font); }
+.curve { fill: none; stroke: #2a78d6; stroke-width: 2.5; stroke-linejoin: round; }
+.curve2 { fill: none; stroke: #eb6834; stroke-width: 2.5; stroke-linejoin: round; }
+.curveDashed { fill: none; stroke: var(--ink-2); stroke-width: 2; stroke-dasharray: 7 5; }
+.curveLabel { font-size: 13px; font-weight: 600; fill: var(--ink); font-family: var(--font); paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.dot { fill: var(--ink); stroke: #fff; stroke-width: 1.5; }
+.region { fill: rgba(42, 120, 214, 0.18); stroke: none; }
+.bar { fill: #cdeed9; stroke: #1e6b44; stroke-width: 1.5; }
+.box { fill: #eaf7ef; stroke: var(--ink); stroke-width: 2; }
+.whisker { stroke: var(--ink); stroke-width: 2; }
+.openShape { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+.smallLabel { font-size: 13px; fill: var(--ink-2); font-family: var(--font); text-anchor: middle; }
+.vennBox { fill: #fff; stroke: var(--ink-2); stroke-width: 1.5; }
+.vennA { fill: rgba(42, 120, 214, 0.12); stroke: #1b5aa6; stroke-width: 2; }
+.vennB { fill: rgba(235, 104, 52, 0.12); stroke: #b2461a; stroke-width: 2; }
+.vennNum { font-size: 20px; font-weight: 600; fill: var(--ink); text-anchor: middle; font-family: var(--font); }
+.segment { stroke: #2a78d6; stroke-width: 5; stroke-linecap: round; }
+.openDot { fill: #fff; stroke: #1b5aa6; stroke-width: 3; }
+.closedDot { fill: #1b5aa6; stroke: #1b5aa6; stroke-width: 3; }

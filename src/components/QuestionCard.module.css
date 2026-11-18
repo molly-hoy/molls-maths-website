@@ -1,0 +1,32 @@
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-5); display: grid; gap: var(--space-3); min-width: 0;
+}
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
+.number { font-size: var(--text-base); margin: 0; color: var(--ink-2); }
+.level { font-size: 0.8125rem; color: var(--ink-3); }
+.prompt { font-size: 1.125rem; font-weight: 400; margin: 0; }
+
+.steps { display: grid; gap: var(--space-4); }
+.step { display: grid; gap: var(--space-1); padding-left: var(--space-3); border-left: 3px solid var(--line); }
+.stepOk { color: var(--good); font-size: var(--text-sm); font-weight: 500; }
+.stepNo { color: var(--warning); font-size: var(--text-sm); font-weight: 500; }
+
+.feedbackArea:empty { display: none; }
+.feedback { margin: 0; padding: var(--space-3) var(--space-4); border-radius: var(--radius); border: 1px solid; font-size: 0.9375rem; }
+.correct { background: var(--good-bg); border-color: #b4dfc4; color: #0c4d2a; }
+.incorrect { background: var(--warning-bg); border-color: #f0d29a; color: #5e3800; }
+.invalid { background: var(--info-bg); border-color: #bcd3ef; color: #133f75; }
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.lockNote { font-size: 0.8125rem; color: var(--ink-3); }
+
+.hints { display: grid; gap: var(--space-2); }
+.hints li { background: #fffbea; border: 1px solid #f3e3a3; border-radius: var(--radius); padding: var(--space-2) var(--space-3); font-size: 0.9375rem; }
+.hintLabel { font-weight: 600; color: #6d5200; margin-right: 0.3em; }
+
+.solution { background: var(--surface-2); border-radius: var(--radius); padding: var(--space-4); }
+.solution h5 { font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 var(--space-2); color: var(--ink-2); }
+.solution ol { margin: 0 0 var(--space-2); padding-left: 1.3rem; }
+.solution li { margin-bottom: var(--space-1); }
+.answer { margin: 0; }

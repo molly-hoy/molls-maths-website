@@ -1,0 +1,31 @@
+// ==========================================================================
+// Cloudflare settings
+// --------------------------------------------------------------------------
+// Tells Cloudflare how to put the site online when it runs
+// "npx wrangler deploy" (the deploy command).
+//
+// The site is a "static" site: after "npm run build" it is just files in the
+// dist folder (HTML, JavaScript, CSS and the worksheet PDFs). Cloudflare
+// uploads that folder and serves it. There is no server code.
+// ==========================================================================
+{
+  // The project's name in your Cloudflare dashboard. It's also used in the
+  // free web address Cloudflare gives you: molls-maths.<your-account>.workers.dev
+  "name": "molls-maths-website",
+
+  // Which version of Cloudflare's behaviour to use. Leave it as it is; it
+  // stops future Cloudflare changes from altering how your site works.
+  "compatibility_date": "2026-11-18",
+
+  "assets": {
+    // The folder "npm run build" makes. This is what goes online.
+    "directory": "./dist",
+
+    // The site is one page (index.html) and React shows the right content
+    // for each address. So if someone opens /worksheets or /year/7 directly,
+    // or refreshes the page, there is no file with that name; this setting
+    // sends them index.html instead of a "404 not found" error, and React
+    // takes over from there.
+    "not_found_handling": "single-page-application"
+  }
+}

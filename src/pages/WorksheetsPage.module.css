@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Worksheets page styles
+   ========================================================================== */
+
+/* Search box above, topic buttons below it */
+.controls { display: grid; gap: var(--space-4); margin-bottom: var(--space-4); }
+
+/* Topic filter "chips": small rounded buttons; the chosen one is green */
+.topics { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip {
+  font: inherit; font-size: var(--text-sm);
+  padding: 0.35rem 0.85rem; min-height: 36px;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--surface); color: var(--ink-2); cursor: pointer;
+}
+.chip:hover { border-color: var(--brand-strong); color: var(--brand-strong); }
+.chipOn, .chipOn:hover { background: var(--brand); border-color: var(--brand-strong); color: var(--brand-ink); font-weight: 500; }
+
+/* A filter row: a small label ("Topic", "Level") then its buttons. On
+   narrow screens the buttons wrap underneath the label. */
+.filterRow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+.filterLabel { font-size: var(--text-sm); font-weight: 600; color: var(--ink-2); min-width: 3.5rem; }
+
+.groupTitle { font-size: var(--text-xl); margin-bottom: var(--space-3); }
+
+/* The worksheet cards themselves are styled in components/WorksheetList.module.css */

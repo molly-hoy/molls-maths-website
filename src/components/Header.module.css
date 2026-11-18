@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Header and navigation styles
+   ========================================================================== */
+
+/* The bar stays stuck to the top of the screen as you scroll */
+.header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+.bar { display: flex; align-items: center; gap: var(--space-4); min-height: 64px; }
+
+.logo { display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: var(--ink); font-weight: 600; font-size: 1.15rem; flex: none; }
+.logoMaths { font-weight: 350; color: var(--ink-2); }
+
+/* ---- The bar's links and drop-down buttons ---- */
+.desktopNav { margin-left: auto; }
+.list { display: flex; align-items: center; gap: var(--space-1); }
+
+.link {
+  display: inline-flex; align-items: center; gap: 0.3em; min-height: 40px; padding: 0.35rem 0.75rem;
+  border-radius: 8px; border: 0; background: none; cursor: pointer;
+  font-size: 0.95rem; font-weight: 450; color: var(--ink-2); text-decoration: none; white-space: nowrap;
+}
+.link:hover { background: var(--surface-2); color: var(--ink); }
+.active { color: var(--brand-ink); background: var(--brand); font-weight: 550; }
+
+/* The little ▾ arrow flips over when the drop-down is open */
+.caret { font-size: 0.7em; transition: transform 0.15s; }
+.caretOpen { transform: rotate(180deg); }
+
+/* ---- Drop-down panels ---- */
+.dropdown { position: relative; }
+.menu {
+  position: absolute; top: calc(100% + 8px); left: 0; z-index: 60;
+  min-width: 17rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: var(--space-2);
+  display: grid; gap: var(--space-2);
+}
+/* "Learn" shows its two sections side by side */
+.menuWide { grid-template-columns: 9rem 15rem; gap: var(--space-4); min-width: 0; }
+.menuHeading { white-space: nowrap; }
+.menuWide .menuSection + .menuSection { border-left: 1px solid var(--line); padding-left: var(--space-4); }
+/* "About" is at the right of the bar, so its panel opens leftwards */
+.menuRight { left: auto; right: 0; }
+
+.menuHeading {
+  margin: var(--space-1) 0 var(--space-1); padding: 0 0.75rem;
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);
+}
+.menuList { display: grid; gap: 2px; }
+.menu .link { width: 100%; white-space: normal; padding-block: 0.45rem; }
+.menuText { display: grid; gap: 1px; }
+/* The short grey description under a link */
+.hint { font-size: 0.8rem; font-weight: 400; color: var(--ink-3); }
+.active .hint { color: var(--brand-ink); opacity: 0.8; }
+
+/* ---- Phone menu ---- */
+.menuButton { display: none; margin-left: auto; }
+
+.panel { border-top: 1px solid var(--line); background: var(--surface); max-height: calc(100vh - 64px); overflow-y: auto; padding-block: var(--space-3) var(--space-5); }
+.panelList { display: grid; gap: 2px; }
+.panelList .link { width: 100%; font-size: 1rem; min-height: 44px; }
+.panelGroup { padding-block: var(--space-2); border-top: 1px solid var(--line); }
+.groupLabel { display: block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); padding: var(--space-1) 0.75rem; }
+.subLabel { display: block; font-size: 0.75rem; color: var(--ink-3); padding: var(--space-1) 0.75rem 0; }
+.panelSub { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 2px; }
+
+/* Below this width the bar's links would be squashed, so swap to the Menu button */
+@media (max-width: 860px) {
+  .desktopNav { display: none; }
+  .menuButton { display: inline-flex; }
+}

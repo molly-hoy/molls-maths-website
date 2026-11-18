@@ -1,0 +1,12 @@
+.runner { display: grid; gap: var(--space-4); min-width: 0; }
+.list { display: grid; gap: var(--space-4); }
+.summary {
+  background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-lg); padding: var(--space-5);
+  display: grid; gap: var(--space-2); justify-items: start;
+}
+.summary p { margin: 0; }
+.summary a { color: var(--brand-ink); }
+.summary :global(.btn) { background: #fff; color: var(--brand-ink); border-color: #fff; margin-top: var(--space-2); }
+.bigScore { font-size: 2.5rem; font-weight: 600; line-height: 1; }
+.submit { display: grid; gap: var(--space-3); position: sticky; bottom: 0; background: linear-gradient(transparent, var(--bg) 30%); padding: var(--space-5) 0 var(--space-3); }
+.submitRow { display: flex; gap: var(--space-3); align-items: center; flex-wrap: wrap; }

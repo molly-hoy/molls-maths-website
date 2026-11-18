@@ -1,0 +1,23 @@
+# Files Git should NOT save or upload to GitHub.
+# Each line is a file or folder name; a trailing / means a folder.
+
+# Downloaded packages: anyone can recreate them with "npm install"
+node_modules/
+
+# The finished site that "npm run build" makes; Netlify builds its own copy
+dist/
+
+# Worksheet PDFs before publishing (the published copies are in public/worksheets)
+worksheets-src/output/
+
+# Python's temporary files
+__pycache__/
+*.pyc
+
+# Files your computer makes on its own
+.DS_Store
+Thumbs.db
+
+# Private settings, such as passwords or keys, if you ever add any
+.env
+.env.local

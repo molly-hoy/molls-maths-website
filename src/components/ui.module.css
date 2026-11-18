@@ -1,0 +1,50 @@
+/* Stacked fraction: numerator over a line over denominator */
+.frac {
+  display: inline-flex; flex-direction: column; align-items: center;
+  vertical-align: middle; margin: 0 0.15em; line-height: 1.1; font-variant-numeric: tabular-nums;
+}
+.num { padding: 0 0.2em; border-bottom: 1.5px solid currentColor; }
+.den { padding: 0 0.2em; }
+.line { display: block; }
+
+/* Strand label: dot + name, coloured lightly */
+.strand {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  font-size: 0.8125rem; font-weight: 500; color: var(--strand-ink);
+  background: var(--strand-tint); padding: 0.15rem 0.6rem; border-radius: 999px; white-space: nowrap;
+}
+.dot { width: 0.6em; height: 0.6em; border-radius: 50%; background: var(--strand); flex: none; }
+
+/* GCSE tier badge */
+.tier { display: inline-flex; align-items: center; gap: 0.4em; font-size: 0.8125rem; font-weight: 600; white-space: nowrap; }
+.tier > span:first-child {
+  display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; border-radius: 5px; font-size: 0.75rem;
+}
+.tierF > span:first-child { background: var(--brand-soft); color: var(--brand-strong); border: 1px solid #9fd3b3; }
+.tierH > span:first-child { background: var(--brand-strong); color: #fff; }
+.grades { font-weight: 400; color: var(--ink-3); }
+
+/* Status pill */
+.pill {
+  display: inline-flex; align-items: center; gap: 0.35em; white-space: nowrap;
+  font-size: 0.8125rem; font-weight: 500; padding: 0.15rem 0.6rem; border-radius: 999px; border: 1px solid;
+}
+.neutral { color: var(--ink-3); border-color: var(--line-strong); background: var(--surface); }
+.info { color: var(--info); border-color: #bcd3ef; background: var(--info-bg); }
+.good { color: var(--good); border-color: #b4dfc4; background: var(--good-bg); }
+.warning { color: var(--warning); border-color: #f0d29a; background: var(--warning-bg); }
+
+/* Progress bar */
+.progress { display: flex; align-items: center; gap: var(--space-3); }
+.track { flex: 1; height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; border: 1px solid var(--line); }
+.fill { height: 100%; background: #4fae7c; border-radius: 999px; transition: width 0.4s; }
+.progressText { font-size: var(--text-sm); color: var(--ink-2); min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Not-yet-written notice: clearly different from real content */
+.placeholder {
+  border: 2px dashed var(--line-strong); border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5); background: repeating-linear-gradient(135deg, #fafbfd 0 12px, #f3f5f9 12px 24px);
+  color: var(--ink-2);
+}
+.placeholder strong { display: block; margin-bottom: var(--space-2); color: var(--ink); }
+.placeholder p:last-child { margin-bottom: 0; }

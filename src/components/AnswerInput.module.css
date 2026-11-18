@@ -1,0 +1,40 @@
+.label { display: block; font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--space-1); }
+.textRow { display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap; }
+.textInput { width: min(100%, 16rem); font-size: 1.125rem; font-variant-numeric: tabular-nums; }
+.tip { font-size: 0.8125rem; color: var(--ink-3); margin: var(--space-1) 0 0; }
+
+/* Multiple choice */
+.choices { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.choice {
+  display: flex; align-items: center; gap: var(--space-2); cursor: pointer;
+  min-height: 48px; padding: 0.5rem 1rem; border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius); background: var(--surface);
+}
+.choice:hover { border-color: var(--brand-strong); }
+.choice:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.chosen { border-color: var(--brand-strong); background: var(--brand-soft); }
+.choice input { accent-color: var(--brand-strong); width: 1.1rem; height: 1.1rem; }
+.choiceLabel { font-weight: 600; font-size: 1.125rem; }
+.choiceText { font-size: var(--text-sm); color: var(--ink-3); }
+fieldset:disabled .choice { cursor: default; opacity: 0.8; }
+
+/* Ordering */
+.order { display: grid; gap: var(--space-2); margin-top: var(--space-2); max-width: 26rem; }
+.orderItem {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: 0.35rem 0.5rem; border: 1.5px solid var(--line-strong); border-radius: var(--radius);
+  background: var(--surface); user-select: none;
+}
+.dragging { border-color: var(--brand-strong); box-shadow: 0 6px 18px rgba(30, 107, 68, 0.2); background: var(--brand-soft); }
+.handle { cursor: grab; touch-action: none; font-size: 1.25rem; color: var(--ink-3); padding: 0.25rem 0.35rem; line-height: 1; }
+.handle:active { cursor: grabbing; }
+.position { font-size: 0.75rem; color: var(--ink-3); width: 1.4em; text-align: center; }
+.orderText { flex: 1; font-size: 1.125rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.orderButtons { display: flex; }
+
+/* Matching */
+.match { display: grid; gap: var(--space-2); }
+.matchRow { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.matchLeft { min-width: 3.5rem; font-size: 1.125rem; font-weight: 500; }
+.matchArrow { color: var(--ink-3); }
+.matchRow select { width: auto; min-width: 9rem; }
